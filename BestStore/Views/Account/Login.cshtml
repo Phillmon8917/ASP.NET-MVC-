@@ -1,0 +1,65 @@
+﻿@model LoginDto
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body >
+    <div class="row p-5 mx-auto">
+        <div class="col-md-4 mx-auto rounded border p-4">
+            <h2 class="text-center mb-3">Log In </h2>
+            <hr />
+
+            <!-- This below is just to show the incorrect password message -->
+            @if(ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>@ViewBag.ErrorMessage</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control"/>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input asp-for="Password" class="form-control" type="password"/>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div >
+               
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" asp-for="RememberMe" />
+                    <label class="form-check-label">Remember Me</label>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col d-grid">
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </div>
+                    <div class="col d-grid">
+                        <a class="btn btn-warning" asp-controller="Home" asp-action="Index" role="button">Cancel</a>
+                    </div>
+                </div>
+
+                <div>
+                    <a class="btn btn-link" asp-controller="Account" asp-action="ForgotPassword">Forgot your password?</a>
+                </div>
+
+                <hr />
+                <div class="fs-sm-5">
+                    <p >Need an account? <a class="fs-sm-5" asp-area="" asp-controller="Account" asp-action="Register">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+ </body>
+ </html>

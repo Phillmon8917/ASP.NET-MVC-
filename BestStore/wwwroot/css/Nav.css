@@ -1,0 +1,80 @@
+﻿/* General Navbar Styling */
+.navbar {
+    background-color: #000; /* Black background */
+    padding: 10px 0; /* Adjust padding for better spacing */
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.25rem; /* Reduced size for brand */
+    font-weight: bold;
+    color: white;
+}
+
+/* Nav Items Styling */
+.navbar-nav {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically centers nav items */
+    justify-content: center; /* Centers the nav links horizontally */
+}
+
+.nav-item {
+    margin: 0 30px; /* Space between individual nav items */
+}
+
+.nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem; /* Reduced font size for nav links */
+    transition: all 0.3s ease-in-out;
+}
+
+    .nav-link:hover {
+        color: orange; /* Highlight color on hover */
+    }
+
+/* Dropdown Styling */
+.dropdown-menu {
+    background-color: #222;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    color: #ddd;
+    padding: 8px 20px;
+    font-size: 0.9rem; /* Reduced font size for dropdown items */
+    transition: all 0.3s ease-in-out;
+}
+
+    .dropdown-item:hover {
+        color: white;
+        background-color: orange;
+    }
+
+.navbar-toggler {
+    border: none;
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+    height: 3px;
+    width: 20px;
+    display: block;
+    margin: 5px 0;
+}
+
+/* Shorping Cart Styling*/
+.cart-icon {
+    position: relative;
+}
+.cart-icon a {
+        color: white;
+        font-size: 24px;
+}
+.cart-icon:hover {
+        color: orange;
+}
+  
